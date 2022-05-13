@@ -1,0 +1,279 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body{
+        --ci1:hsl(59, 97%, 6%);
+        --ci2:hsl(51, 92%, 65%);
+        --ci3:hsl(11, 73%, 70%);
+        --ci4:hsl(27, 92%, 59%);
+        --ci5:hsl(11, 73%, 54%);
+        --ci6:hsl(339, 100%, 38%);
+        background:hsl(13, 20%, 15%);
+        margin:0;
+        font-family:sans-serif;
+        color:#357;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      }
+      .cl-ci4{
+        color:var(--ci4) }
+      a{
+        text-decoration:none;
+        color:var(--ci3);
+      }
+      a:hover{
+        color:var(--ci4);
+      }
+      nav{
+        height:64px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        box-sizing:border-box;
+        box-shadow:0px 5px 10px #0008;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      nav .site{
+        width:4rem;
+        margin-left:1rem;
+      }
+      nav .nav-items{
+        height:100%;
+        width:calc(100% - 5rem);
+        display:flex;
+        justify-content:flex-end;
+      }
+      nav a{
+        height:100%;
+        display:inline-flex;
+        align-items:center;
+        padding:0 1em ;
+        font-weight:bold;
+        transition:all .2s;
+      }
+      nav a:hover{
+        color:white;
+        background:var(--ci2);
+      }
+      .logo{
+        font-size:2rem;
+        color:var(--ci3);
+      }
+      #header{
+        height:50vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+          url(https://media.discordapp.net/attachments/886895373090705418/974677338279251989/unknown.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .header-inner{
+        background-image:
+          linear-gradient(to bottom,#0004,#000c);
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-flow:column wrap;
+        font-family: 'Chonburi', cursive;
+      }
+      .header-inner h1,.header-inner h2{
+        margin:0;
+      }
+      .header-inner h2{
+        font-size:2em;
+        color:#fff;
+      }
+      #palette{
+        display:flex;
+        width:max-content;
+        margin:auto;
+        margin-top:-40px;
+        position:relative;
+        z-index:10;
+      }
+      .palette-color{
+        width:64px;
+        height:64px;
+        background:grey;
+        border-radius:9px;
+        margin-left:1.5em;
+        border:.5em solid #fff;
+        /*         box-sizing:border-box; */
+        box-shadow:0px 5px 10px #0002;
+      }
+      
+      .article{
+        max-width:900px;
+        margin:auto;
+        padding:2em;
+      }
+      .title{
+        color:var(--ci2);
+        background:var(--ci1);
+        padding:0.4em .5em;
+        display:inline-block;
+        font-size:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+        font-family: 'Chonburi', cursive;
+      }
+      .subtitle{
+        font-size:1.4em;
+        color:var(--ci2);
+        font-family: 'Noto Sans Thai', sans-serif;
+        display:inline-block;
+        background:var(--ci1);
+        padding:0.4em .5em;
+      }
+      .lead{
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .pic{
+        width:100%;
+        border-radius:15px;
+        box-shadow:0px 5px 10px #0005;
+        margin:1em 0 2em;
+      }
+      .hr{
+        display:block;
+        width:200px;
+        background:var(--ci5);
+        height:4px;
+        margin:auto;
+      }
+      #footer{
+        background:var(--ci3);
+        background-image:linear-gradient(to top,#0000,#0004), url(https://cdn.discordapp.com/attachments/886895373090705418/974703418247622676/unknown.png);
+        padding:2em 1 3em;
+        color:hsl(27, 92%, 59%);
+        background-size:cover;
+        background-position:top center;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #copy{
+        background:var(--ci4);
+        color:white;
+        padding:1em 0;
+        text-align:center;
+        font-size:.8em;
+        font-weight:700;
+        color:hsl(59, 97%, 6%);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .social{
+        font-size:2em;
+      }
+      .caption{
+        text-align:center;
+        font-style:italic;
+        color:var(--ci3);
+        margin-bottom:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      blockquote {
+        color:hsl(59, 97%, 6%);
+        margin: 2em;
+        background: hsl(54, 97%, 86%);
+        padding: 1em;
+        font-size: 1.3em;
+        border-left: 10px solid var(--ci1);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .my_txt {
+			color:hsl(27, 92%, 59%);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <div class="header-inner">
+        <h2 style="font-weight:200">
+          ระบบการจองซื้อตั๋วหนังอย่างง่าย
+        </h2>
+      </div>
+    </section>
+    
+    <section class="article">
+      <h2 class="title">
+        ที่มาและความสำคัญ
+      </h2>
+      <p class="lead cl-ci4">
+        <b> เนื่องจากกลุ่มของพวกเราได้มาประชุมกันเมื่อตอนเลือกหัวข้อโครงงานว่ากลุ่มของเราจะเลือกหัวขข้ออะไรดี ที่สามารถนำไปพัฒนาต่อ และเป็นประโยชน์ต่อคนที่มาใช้งาน เราจึงพูดกันถึงสิ่งที่ชอบ ทำให้ได้ข้อสรุปคือการทำระบบจองตั๋วหนัง ซึ่งปัญหาก็กลุ่มของพวกเรานั้นไม่ค่อยมีความชำนาญด้านการเขียนโปรแกรม เราจึงสร้างเป็นระบบการจองตั๋วแบบอย่างง่ายขึ้นมาแทน ซึ่งอาจจะนำไปพัฒนาจนเป็นระบบที่ใหญ่ได้ และใช้การได้จริงในอนาคต
+            โครงงานนี้เป็นการศึกษาการจองตั๋วอย่างง่ายโดยผ่านการเขียนโปรแกรมภาษาซี ซึ่งจัดทำขึ้นเพื่อศึกษาการเขียนโปรแกรมภาษาซี และการสร้างสรรค์แอพพลิเคชั่นที่อาจจะสามารถนำไปใช้พัฒนาต่อได้ หากเกิดข้อผิดพลาดประการใด ผู้จัดทำขออภัยมา ณ ที่นี้ด้วย
+      </p>
+      <h2 class="title">
+        จุดประสงค์ของโครงงาน
+      </h2>
+      <p class="my_txt">
+        <b>โครงงานในครั้งนี้มีจุดประสงค์เพื่อศึกษาพื้นฐานภาษา C โดยการเขียนโค้ดเกี่ยวกับระบบจองตั๋วหนังอย่างง่ายขึ้นมา โดยภายในนั้นมีระบบต่างประกอบไปด้วย การแก้ไขราคา การยกเลิกตั๋วหนังซึ่งมีการใช้ Function พื้นฐานต่างๆ ประกอบไปด้วย If.....else, switch case, structure, system  มาใช้ในการเขียน 
+      </p>
+      <h2 class="title">
+        รายละเอียดเกี่ยวกับโครงงาน
+      </h2>
+      <p class="my_txt">
+        <b>โครงงานนี้ที่เราทําขึ้นมาจะเป็นเหมือนโปรแกรมเล็กๆ ที่ใช้ ในการจองที่นั่งในโรงหนังและนอกจากการจองตั๋วหนังเราก็ยังมีระบบอื่นๆ อีกอย่างเช่นการตรวจสอบการจองตั๋ว การจองตั๋ว การยกเลิกการจองตั๋ว และออกจากระบบจอง โดยวิธีการจองตั๋วหนังนั้นทำได้ง่ายดังนี้ ขั้นแรกเราทำการ เลือกตัวเลือกการจองหนังจากนั้นเราทําการเลือกหนังเรื่อง ที่เราต้องการที่จะดู จากนั้นก็เลือกที่นั่งให้ชื่อเบอร์โทรศัพท์ จากนั้นก็เป็นอันเสร็จสิ้นการจอง 
+      </p>
+      <h2 class="title">
+        จองตั๋วได้ง่ายๆ ทำอย่างไรเรามาดูกัน
+      </h2>
+      <p class="my_txt">
+        <b>ก่อนอื่นเมื่อเรารันโปรแกรมขึ้นมาแล้ว
+          จะมีตัวเลือกขึ้นมาให้เลือก 4 ตัวเลือกนั่นคือ<br>
+          1.การตรวจสอบการจองตั๋ว<br>
+          2.การจองตั๋วหนัง<br>
+          3.การยกเลิกการจองตั๋ว<br>
+          4.ออกจากระบบ
+      <img src="https://media.discordapp.net/attachments/886895373090705418/974693529907515422/mainpage.png" class="pic">
+      เมื่อทำการเลือกตัวเลือกที่ 2 จะพาไปสู่หน้าการเลือกหนังที่คุณจะรับชม โดยหนังที่ฉายอยู่ตอนนี้ประกอบไปด้วย<br>
+      1.Jujutsu kaisen : Zero<br>
+      2.Lightyear<br>
+      3.Detective Conan The Movie 25
+      <img src="https://media.discordapp.net/attachments/886895373090705418/974693530196934716/buyticket.png" class="pic">
+      เมื่อทำการเลือกเสร็จแล้วจะนำมาสู่หน้าการเลือกที่นั่ง ซึ่งมีที่นั่งทั้งหมด 56 ที่นั่ง
+      และต้องกรอกรายละเอียดประกอบด้วย ชื่อ เบอร์โทรศัพท์ของคุณ และที่นั่งที่คุณต้องการนั่ง
+      <img src="https://media.discordapp.net/attachments/886895373090705418/974693530452783124/seat.png" class="pic">
+      หลังจากนั้นการจองตั๋วของคุณก็เสร็จเรียบร้อย และจะมีการโชว์รายละเอียดต่างๆของการจองตามรูปด้านล่าง
+      <img src="https://media.discordapp.net/attachments/886895373090705418/974693530696044574/bookingticket.png?width=632&height=521" class="pic">
+      ต่อมาจะเป็นการตรวจสอบการจองหนัง เมื่อเลือกแล้วจะมีการโชว์รายละเอียดของตั๋วที่ทำการจองไปแล้ว เป็นอันเสร็จขั้นตอน
+      <img src="https://media.discordapp.net/attachments/886895373090705418/974693531060940810/check.png" class="pic">
+    </p>
+      <h2 class="title">
+        ถ้าหากว่าอยากจะยกเลิกการจองล่ะ
+      </h2>
+      <p class="my_txt">
+        ขั้นแรกก็กดเลข 3 ที่ main menu กันเลย
+        <img src="https://cdn.discordapp.com/attachments/886895373090705418/974697866750750721/unknown.png" class="pic">
+        จากนั้นระบบก็จะขึ้นให้เลือกหนังที่เราต้องการยกเลิก เราก็กดเลขตามหนังที่เราได้ทำการจองไปตอนแรก
+        และทำการกรอกเลข ID ของตั๋ว ให้ถูกต้อง ซึ่งถ้าหากกรอกผิดระบบจะกลับไปที่หน้า main menu
+        <img src="https://cdn.discordapp.com/attachments/886895373090705418/974698135056162876/unknown.png" class="pic">
+        เมื่อกรอกเสร็จแล้วระบบก็จะขึ้นประกาศชื่อว่าทำการยกเลิกการจองแล้ว เป็นอันเสร็จขั้นตอน
+        <img src="https://cdn.discordapp.com/attachments/886895373090705418/974699768498511902/unknown.png" class="pic">
+      </p>
+      
+      <blockquote>
+        ถ้าหากยังไม่เข้าใจวิธีการจองหรือยกเลิกตั๋วสามารถเข้าไปดูวิธีที่ลิงค์นี้เลย!!!
+        <a href="https://youtu.be/QN2Ts51tGQY">https://youtu.be/QN2Ts51tGQY</a>
+      </blockquote>
+    </section>
+    <footer id="footer">
+      <div class="article">
+        <h3>
+            จัดทำโดย<br>
+            นายภาคิณ กีรติภักดีพงศ์ 64070206<br>
+            นายเมธิส โพธิ์กิ่ง 64070216<br>
+            นายศิลา ชูนาม 64070235<br>
+        </h3>
+      </div>
+    </footer>
+  </body>
+</html>
