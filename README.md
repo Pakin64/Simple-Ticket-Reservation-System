@@ -1,6 +1,6 @@
 # Simple-Ticket-Reservation-System
 ระบบการจองซื้อตั๋วหนังอย่างง่าย <br />
-https://youtu.be/W10sxyOn5g4 <br />
+https://youtu.be/QN2Ts51tGQY<br />
 
   จัดทำโดย<br>
 นายภาคิณ กีรติภักดีพงศ์ 64070206<br>
